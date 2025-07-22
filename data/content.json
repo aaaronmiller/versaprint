@@ -1,0 +1,9 @@
+{
+  "pageTitle": "Data-Driven Content",
+  "welcomeMessage": "This content was loaded dynamically from a JSON file.",
+  "features": [
+    "Dynamic content rendering",
+    "Separation of data and presentation",
+    "Easy to update content via JSON"
+  ]
+}

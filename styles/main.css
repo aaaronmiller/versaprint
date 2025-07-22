@@ -1,0 +1,108 @@
+/* --- Synthwave+ Dark Mode by The Gnnnome --- */
+
+/* Root variables for easy theme management */
+:root {
+    --bg-primary: #0d0221;
+    --bg-secondary: #0c001a;
+    --accent-pink: #ff00ff;
+    --accent-cyan: #00ffff;
+    --accent-purple: #9d00ff;
+    --text-color: #f0f0f0;
+    --glow-color-1: rgba(255, 0, 255, 0.7);
+    --glow-color-2: rgba(0, 255, 255, 0.7);
+    --font-primary: 'Orbitron', sans-serif;
+    --font-secondary: 'Audiowide', cursive;
+}
+
+/* Background animation */
+@keyframes background-pan {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background-color: var(--bg-primary);
+    background-image: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+    background-size: 400% 400%;
+    animation: background-pan 15s ease infinite;
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Header & Footer --- */
+.main-header, .main-footer {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--accent-cyan);
+    text-align: center;
+}
+.main-footer {
+    border-bottom: none;
+    border-top: 1px solid var(--accent-cyan);
+    font-size: 0.8rem;
+    color: var(--accent-purple);
+}
+
+.logo {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    color: var(--accent-pink);
+    text-shadow: 0 0 5px var(--glow-color-1), 0 0 10px var(--glow-color-1);
+    margin-bottom: 1rem;
+}
+
+nav a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px var(--glow-color-2);
+}
+
+nav a:hover {
+    color: var(--accent-pink);
+    text-shadow: 0 0 8px var(--glow-color-1);
+}
+
+/* --- Main Content --- */
+.content-area {
+    padding: 2rem 0;
+}
+
+h1 {
+    font-family: var(--font-secondary);
+    color: var(--accent-pink);
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 7px var(--glow-color-1), 0 0 15px var(--glow-color-1), 0 0 25px var(--glow-color-1);
+}
+
+p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+#app-root {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 1px solid var(--accent-purple);
+    border-radius: 8px;
+    background-color: rgba(12, 0, 26, 0.5);
+    box-shadow: 0 0 15px rgba(157, 0, 255, 0.3);
+}
