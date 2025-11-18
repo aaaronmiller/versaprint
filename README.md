@@ -16,6 +16,132 @@ VersaPrint is a professional publishing plugin for Obsidian that allows you to e
 - **Self-Contained HTML:** Generate single, portable HTML files with all CSS styles and images embedded. Perfect for sharing or web archiving.
 - **CSS Snippet Management:** Apply your custom CSS snippets to exports.
 
+## Building and Deployment
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+- Git
+
+### Building from Source
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/versaprint/obsidian-versaprint.git
+   cd obsidian-versaprint
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Build the plugin:**
+   ```bash
+   npm run build
+   ```
+
+   This will:
+   - Run TypeScript type checking
+   - Bundle the plugin with esbuild
+   - Generate `main.js` in the project root
+
+### Development Workflow
+
+For development with hot-reload:
+
+1. **Start the development build:**
+   ```bash
+   npm run dev
+   ```
+
+   This watches for file changes and automatically rebuilds the plugin.
+
+2. **Link to your Obsidian vault:**
+   ```bash
+   # Create a symbolic link to your vault's plugins folder
+   # Replace VAULT_PATH with your actual vault path
+
+   # On Linux/Mac:
+   ln -s "$(pwd)" "/path/to/your/vault/.obsidian/plugins/versaprint"
+
+   # On Windows (run as Administrator):
+   mklink /D "C:\path\to\vault\.obsidian\plugins\versaprint" "%CD%"
+   ```
+
+3. **Enable the plugin:**
+   - Open Obsidian
+   - Go to Settings → Community Plugins
+   - Enable "VersaPrint"
+
+4. **Reload the plugin after changes:**
+   - Open Command Palette (`Ctrl/Cmd + P`)
+   - Run "Reload app without saving" to see your changes
+
+### Manual Installation
+
+If you want to manually install the built plugin:
+
+1. **Build the plugin** (see above)
+
+2. **Copy files to your vault:**
+   ```bash
+   # Create the plugin directory
+   mkdir -p /path/to/vault/.obsidian/plugins/versaprint
+
+   # Copy the necessary files
+   cp main.js manifest.json styles/ /path/to/vault/.obsidian/plugins/versaprint/
+   ```
+
+3. **Required files for deployment:**
+   - `main.js` - The compiled plugin code
+   - `manifest.json` - Plugin metadata
+   - `styles/` - CSS theme files (optional but recommended)
+
+4. **Restart Obsidian** and enable the plugin in Settings
+
+### Distribution / Release Build
+
+For creating a release:
+
+1. **Update version numbers:**
+   - Update `version` in `manifest.json`
+   - Update `version` in `package.json`
+   - Add entry to `versions.json` if needed
+
+2. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+3. **Create a release package:**
+   ```bash
+   # Create a zip with required files
+   zip -r versaprint-release.zip main.js manifest.json styles/
+   ```
+
+4. **Release on GitHub:**
+   - Create a new release tag (e.g., `v1.2.0`)
+   - Upload `main.js` and `manifest.json`
+   - Users can install via Obsidian's Community Plugins browser
+
+### Troubleshooting
+
+**Build fails with TypeScript errors:**
+- Run `npm install` to ensure all dependencies are installed
+- Check that you're using Node.js v16 or higher
+
+**Plugin doesn't appear in Obsidian:**
+- Ensure all three files (`main.js`, `manifest.json`, `styles/`) are in the correct directory
+- Check that the plugin folder name matches the `id` in `manifest.json` (should be `versaprint`)
+- Restart Obsidian completely
+
+**Changes not reflecting:**
+- Make sure you ran `npm run dev` or `npm run build` after making changes
+- Reload Obsidian with Command Palette → "Reload app without saving"
+- Check the browser console (Ctrl+Shift+I) for errors
+
 ## How to Use
 
 1.  **Open the Export Modal:**
