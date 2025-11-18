@@ -1,0 +1,11 @@
+{
+  "id": "versaprint",
+  "name": "VersaPrint",
+  "version": "1.2.0",
+  "minAppVersion": "0.15.0",
+  "description": "Professional publishing for Obsidian - export beautiful PDFs and HTML with custom themes, auto dark-to-light conversion, table optimization, preview, and scaling controls.",
+  "author": "VersaPrint Team",
+  "authorUrl": "https://github.com/versaprint/obsidian-versaprint",
+  "fundingUrl": "https://github.com/sponsors/versaprint",
+  "isDesktopOnly": false
+}
