@@ -4,17 +4,20 @@
     "inlineSourceMap": true,
     "inlineSources": true,
     "module": "ESNext",
-    "target": "ES6",
+    "target": "ES2018",
     "allowJs": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "moduleResolution": "node",
     "importHelpers": true,
     "isolatedModules": true,
     "strictNullChecks": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "lib": [
       "DOM",
-      "ES6"
+      "ES2020"
     ],
+    "types": ["node"],
     "paths": {
       "@/*": ["src/*"]
     }
