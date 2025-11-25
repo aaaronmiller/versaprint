@@ -1,0 +1,88 @@
+/*
+ * VersaPrint: Bundled arXiv Academic Style Theme
+ * Based on the classic look and feel of arXiv.org preprints.
+ */
+
+.theme-light.arxiv-style,
+.theme-dark.arxiv-style {
+  --font-family-serif: 'Times New Roman', Times, serif;
+  --font-family-sans: 'Helvetica', Arial, sans-serif;
+
+  --text-normal: #222222;
+  --background-primary: #ffffff;
+  --background-secondary: #f0f0f0;
+  --interactive-accent: #003399;
+}
+
+.arxiv-style .markdown-preview-view {
+  font-family: var(--font-family-serif);
+  font-size: 10pt;
+  line-height: 1.4;
+  max-width: 6.5in;
+  margin: 0 auto;
+  padding: 1in;
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+  text-align: justify;
+}
+
+.arxiv-style h1,
+.arxiv-style h2,
+.arxiv-style h3,
+.arxiv-style h4,
+.arxiv-style h5,
+.arxiv-style h6 {
+  font-family: var(--font-family-sans);
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  text-align: left;
+  color: #000000;
+}
+
+.arxiv-style h1 { font-size: 17pt; text-align: center; margin-top: 0; }
+.arxiv-style h2 { font-size: 14pt; }
+.arxiv-style h3 { font-size: 12pt; }
+.arxiv-style h4 { font-size: 10pt; font-style: italic; }
+
+.arxiv-style p {
+  margin-bottom: 0.7em;
+}
+
+/* Abstract Styling */
+.arxiv-style blockquote {
+  font-family: var(--font-family-serif);
+  border-left: none;
+  padding: 0 2em;
+  margin: 1em 2em 2em 2em;
+  text-align: left;
+}
+
+.arxiv-style blockquote p {
+  text-align: left;
+}
+
+.arxiv-style a {
+  color: var(--interactive-accent);
+  text-decoration: none;
+}
+
+.arxiv-style a:hover {
+  text-decoration: underline;
+}
+
+.arxiv-style code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 9pt;
+  background-color: var(--background-secondary);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.arxiv-style pre > code {
+  display: block;
+  padding: 0.5em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
