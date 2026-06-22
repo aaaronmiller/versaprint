@@ -1,5 +1,11 @@
 # VersaPrint: Professional Publishing for Obsidian
 
+<p>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
+<img src="https://img.shields.io/badge/Obsidian-7C3AED?style=flat-square&logo=obsidian&logoColor=white">
+<img src="https://img.shields.io/badge/Export-PDF%20%C2%B7%20HTML-22c55e?style=flat-square">
+</p>
+
 VersaPrint is a professional publishing plugin for Obsidian that allows you to export your notes to beautiful PDF and self-contained HTML files. Take full control over your output with custom themes, academic styles, and precise layout adjustments, all without leaving your Obsidian workspace.
 
 ## Features
